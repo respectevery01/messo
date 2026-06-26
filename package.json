@@ -1,0 +1,55 @@
+{
+  "name": "messo",
+  "version": "0.1.0",
+  "description": "Open-source email infrastructure for AI agents — SDK, CLI, and self-hosted backend.",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "bin": {
+    "messo": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "worker",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test test/**/*.test.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "email",
+    "ai",
+    "agent",
+    "sdk",
+    "cli",
+    "cloudflare",
+    "open-source",
+    "temp-mail",
+    "langchain"
+  ],
+  "license": "MIT",
+  "author": "Jask",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/respectevery01/messo"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
